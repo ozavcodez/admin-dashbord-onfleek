@@ -1,0 +1,35 @@
+.piechart{
+display: flex;
+justify-content: center !important;
+width: 100px;
+margin: 0 auto;
+
+
+.radialBar {
+    flex: 1 1;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    width: 5px;
+    margin:0 -20px ;
+    filter: drop-shadow(2px 4px 6px white);
+ 
+  }
+  .CircularProgressbar {
+    width: 9rem !important;
+    overflow: visible;
+  }
+  .CircularProgressbar-path {
+    stroke: var(--blue-color) !important;
+    stroke-width: 1px !important;
+  }
+  .CircularProgressbar-trail {
+    display: none;
+  }
+  .CircularProgressbar-text {
+    fill: var(--blue-color) !important;
+  }
+}

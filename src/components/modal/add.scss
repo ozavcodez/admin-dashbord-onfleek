@@ -1,0 +1,61 @@
+/* Modal container */
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  top: calc(100% + 10px); /* Position the modal below the notification icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  max-height: 300px; /* Set a maximum height for the dropdown */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+/* Show the modal when it's open */
+.modal.open {
+  display: block;
+}
+
+/* Modal content */
+.modal-content {
+  padding: 10px;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+/* Close button icon */
+.close:hover {
+  color: black;
+}
+
+/* Notification icon container */
+.notification {
+  position: relative;
+}
+
+/* Notification icon */
+.notification .icon {
+  cursor: pointer;
+}
+
+/* Example animation for dropdown effect */
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

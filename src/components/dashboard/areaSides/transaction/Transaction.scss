@@ -1,0 +1,48 @@
+
+
+.transaction{
+    .list {
+        .listItem {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 20px;
+    
+          .item {
+            display: flex;
+            gap: 10px;
+    
+            .icon {
+              width: 30px;
+              height: 30px;
+              object-fit: cover;
+            }
+    
+            .itemTexts {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+    
+              .name {
+                font-size: 16px;
+                font-weight: 800;
+              }
+              .date {
+                font-size: 12px;
+    
+                // @include xxl{
+                //   display: none;
+                // }
+                // @include lg{
+                //   display: block;
+                // }
+              }
+            }
+          }
+    
+          .amount {
+            font-weight: 500;
+          }
+        }
+      }
+}

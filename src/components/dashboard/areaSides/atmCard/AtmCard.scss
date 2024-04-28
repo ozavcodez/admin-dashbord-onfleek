@@ -1,0 +1,46 @@
+
+.atmCard{
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: auto;
+    flex-direction: column;
+
+    .atm{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        img{
+            object-fit: contain;
+            display: flex;
+            justify-content: center;
+            border-radius: 30px;
+            width: 300px;
+            @media screen and (max-width: 1200px) {
+                width: 280px;
+
+            }
+        } 
+    }
+    .cardDetails{
+        position: absolute;
+        top:40%;
+        left:0;
+        right: 0;
+        margin: auto;
+        // transform: translateY(-50%);
+        color: var(--light-color);
+        .number{
+           display: flex;
+           justify-content: center;
+           letter-spacing: 6px;
+        }
+        .cardHeader{
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 40px 5px 40px;
+
+        }
+    }
+}
