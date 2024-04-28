@@ -1,8 +1,20 @@
-# React + Vite
+# onfleek-assessment dashboard
+This project is build with vite and react. It is a responive dashboard for onfleek assessment.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Features
+* Make use of react-router to link to different components.
+* Create a product for a merchant.
+* Edit an existing product.
+* Delete an existing product.
 
-Currently, two official plugins are available:
+# Technologies Used
+* React - JavaScript framework for client-side rendering
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Build and run the project
+* npm run dev
+
+# Contributors
+Akande Ozavize(ozavcodez)
+
+# deployed website
+https://admin-dashbord-rho.vercel.app/
