@@ -46,7 +46,7 @@ const AreaSide = () => {
                     {showEditDropdown && (
                         <div className="dropdown-content">
                             {/* Dropdown items */}
-                            <div className="dropdown-item">edit</div>
+                            <div className="dropdown-item">Add </div>
 
                         </div>
                     )}

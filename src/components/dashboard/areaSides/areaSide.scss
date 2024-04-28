@@ -2,6 +2,10 @@
 .sideBox {
     position: relative;
     width: max-content;
+    @media screen and (max-width: 768px){
+        width:100%;
+        
+      }
 
     .title{
         display:flex;
@@ -30,6 +34,9 @@
         width: 100%;
         color: var(--lightgray-color);
         cursor: pointer;
+        @media screen and (max-width: 768px){
+            display: none;
+        }
     }
     .blue-btn{
         position: absolute;

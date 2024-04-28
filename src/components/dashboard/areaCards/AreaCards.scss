@@ -60,4 +60,9 @@
         }
         
     }
+    @media (max-width: 768px) {
+        .box8 {
+          display: none;
+        }
+      }
 }

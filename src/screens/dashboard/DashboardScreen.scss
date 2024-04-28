@@ -1,7 +1,7 @@
-.dashboard{
+.dashboard {
     position: relative;
     display: grid;
-    gap: 20px ;
+    gap: 20px;
     height: 97%;
     width: 97%;
     border-radius: 2rem;
@@ -10,7 +10,7 @@
     // grid-auto-rows: minmax(180px, auto);
     // grid-auto-flow: dense;
 
-    @media screen and (max-width:768px){
+    @media screen and (max-width:768px) {
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
         overflow: scroll;
@@ -18,81 +18,85 @@
     }
 
 }
-.statistics{
+
+.statistics {
     grid-column: span 8;
 
-    @media screen and (max-width:1024px){
-        grid-column: span 7;
-    }
-    @media screen and (max-width:768px){
+    // @media screen and (max-width:1024px) {
+    //     grid-column: span 7;
+    // }
+
+    @media screen and (max-width:768px) {
         display: none;
     }
 }
-.statistics2{
-    width: 100%;
-    display: none;
-    @media screen and (max-width:768px){
-        display: grid;
-        scroll-margin-top: 100px;
-        margin-top: 100px;
-    }
 
-}
 
-.revenue{
+.revenue {
+    margin-top: 100px;
     grid-column: span 4;
     margin: 0 auto;
     border-radius: 20px;
     padding: 20px;
     background-color: var(--card-color);
-    
 
-    @media screen and (max-width:768px){
+
+    @media screen and (max-width:768px) {
         display: none;
     }
 }
-  
-.revenue2{
-    grid-column: span 4;
-    padding: 20px;
-    margin: 0 auto;
-    background-color: var(--card-color);
-    // transform: translateX(0);
-    transition: var(--default-transition);
-    display: none;
-    opacity: 0;
-    
 
-    @media screen and (max-width:768px){
+.wallet {
+
     background-color: var(--card-color);
-        width:100%;
-        opacity: 1;
-        display: block;
-        scroll-margin-top: 100px;
-        margin-top: 100px;
-        h1{
-            color: var(--gray-color);
-            font-size: 20px ;
-            text-align: center;
-        }
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    display: block;
+    scroll-margin-top: 100px;
+    margin-top: 100px;
+    display:flex;
+    justify-content: center;
+    padding: 40px;
+
+    h1 {
+        color: var(--gray-color);
+        font-size: 20px;
+        text-align: center;
+
     }
 }
-.display-btn{
+
+.data {
+    display: grid;
+    width: 100vw;
+    scroll-margin-top: 100px;
+    margin-top: 100px;
+}
+
+.display-btn {
     display: none;
     margin: 10px;
-    button{
-        padding: 10px;
-        background-color: var(--card-color);
+    position: absolute;
+    z-index: 1000;
+
+    button {
+        padding: 14px 20px;
+        background-color: var(--lightgray-color);
         display: flex;
         justify-content: center;
+        color:white;
+        border-radius: 2px;
 
-
+        .icon{
+            width: 28px;
+        }
     }
-    @media screen and (max-width:768px){
+
+    @media screen and (max-width:768px) {
         display: flex;
         justify-content: center;
         position: fixed;
-        left: 50%;
+        left: 40%;
     }
 }
-  

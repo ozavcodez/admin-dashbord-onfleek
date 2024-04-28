@@ -13,7 +13,7 @@ const ProgressChart = () => {
             <div className="radialBar">
                 <AnimatedProgressProvider
                     valueStart={0}
-                    valueEnd={70}
+                    valueEnd={35}
                     duration={1.4}
                     easingFunction={easeQuadInOut}
 

@@ -16,8 +16,8 @@ const SideBar = () => {
       </div>
       <div className="sidebar-body">
         <ul className='menu-list'>
-          {links.map((link) => (
-            <li key={link.to} className='menu-item'> 
+          {links.map((link, id) => (
+            <li key={id} className='menu-item'> 
               <Link to={link.to} className={`menu-link ${currentPath === link.to ? 'active' : ''}`}>
                 <span className='menu-link-icon' size={50}>{link.icon}</span>
               </Link>
