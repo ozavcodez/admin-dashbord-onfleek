@@ -3,9 +3,8 @@ This project is build with vite and react. It is a responive dashboard for onfle
 
 # Features
 * Make use of react-router to link to different components.
-* Create a product for a merchant.
-* Edit an existing product.
-* Delete an existing product.
+* Use Apex chart and react-chart to show data on chart.
+* shows notification.
 
 # Technologies Used
 * React - JavaScript framework for client-side rendering
