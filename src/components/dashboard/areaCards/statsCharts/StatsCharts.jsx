@@ -8,35 +8,23 @@ const StatisticChart = () => {
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const [showCalendar, setShowCalendar] = useState(false);
 
+  // Function to handle year change
   const handleYearChange = (year) => {
     setSelectedYear(year);
-    setShowCalendar(false);
+    setShowCalendar(false); // Close the calendar after selecting the year
   };
 
-  const getSubtitleText = () => {
-    return `
-      <div class="toolbar-custom">
-        <button class="year-button" onclick="handleCalendarClick()">${String(selectedYear)}</button>
-        <div id="calendar-container"></div>
-      </div>
-    `;
+  // Custom toolbar icon configuration
+  const toolbarIcons = {
+    calendar: {
+      icon: '<span> year <img src="/drop-icon.png"></span>',
+      title: 'Open Calendar', // Tooltip for the icon
+      class: 'custom-calendar-icon', // Custom CSS class for styling
+      click: function () {
+        setShowCalendar(!showCalendar); // Toggle calendar visibility
+      },
+    },
   };
-
-  const handleCalendarClick = () => {
-    const calendarContainer = document.getElementById('calendar-container');
-    if (calendarContainer) {
-      calendarContainer.innerHTML = `
-        <DatePicker
-          selected=${new Date(selectedYear, 0, 1)}
-          onChange=${(date) => handleYearChange(date.getFullYear())}
-          dateFormat="yyyy"
-          showYearPicker
-        />
-      `;
-    }
-    setShowCalendar(!showCalendar);
-  };
-
   const data = {
     series: [
       {
@@ -68,33 +56,36 @@ const StatisticChart = () => {
     ],
     options: {
       chart: {
-        id: "basic-bar",
+        id: "candles",
         type: 'candlestick',
         height: 350,
         toolbar: {
-          show: false, // Hide the toolbar icons
+          show: true, // Hide the toolbar icons
+          offsetX: 0,
+          offsetY: 10,
+          tools: {
+            download: false,
+            customIcons: [toolbarIcons.calendar]
+          },
+        },
+        zoom: {
+          enabled: false
         },
        
-        row: {
-          show: false,      // you can either change hear to disable all grids
-        },
-        column: {
-          show: false,      // you can either change hear to disable all grids
-          opacity: 0
-        },
+      },
+      
+      grid: {
+        show: false,
       },
       title: {
-        text: 'Spent Time',
+        text: 'Statistics',
         align: 'left',
       },
-      subtitle: {
-        text: "Year",
-        align: 'right ',
-      },
+      
       xaxis: {
         type: 'category',
         lines: {
-          show: false
+          show: true
       }
 
       },
@@ -103,8 +94,9 @@ const StatisticChart = () => {
           enabled: true,
         },
         lines: {
-          show: false
+          show: true
       },
+        
       tickAmount: 4,
       },
       plotOptions: {
@@ -118,8 +110,22 @@ const StatisticChart = () => {
   };
 
   return (
-    <div className="CustomerReview">
-      <Chart options={data.options} series={data.series} type="candlestick" height={250} />
+    <div className="custom-calendar-container">
+        <div className="custom-calendar-container">
+        {showCalendar && (
+        <DatePicker className='calendar-dropdown'
+          selected={new Date(selectedYear, 0, 1)} // January 1st of selected year
+          onChange={(date) => handleYearChange(date.getFullYear())}
+          dateFormat="yyyy"
+          showYearPicker
+        />
+      )}
+        </div>
+
+      
+      <Chart options={data.options} series={data.series} type="candlestick" height={250} width="90%" />
+      
+      
     </div>
   );
 };

@@ -1,3 +1,40 @@
-.chart-container .apexcharts-toolbar {
-    display: none;
+.custom-calendar-container {
+    position: relative; 
   }
+  
+  .custom-calendar-icon {
+    display: flex;
+    background-color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 5px 40px 5px 10px;
+    cursor: pointer; 
+  }
+  .custom-calendar-icon span{
+    display: inline-flex; 
+    padding-right: 10px;
+    font-size: 16px;
+    color: var(--blue-color)
+
+  }
+  .custom-calendar-icon img{
+    padding: 5px;
+    width: 10px;
+    margin-top: 4px;
+    object-fit: contain;
+  }
+  
+  .calendar-dropdown {
+    position: absolute; /* Position absolute to place it below the icon */
+    top: 10%; /* Position below the icon */
+    left: 0;
+    background-color: #fff; /* White background color for the dropdown */
+    border: 1px solid #ccc; /* Border for the dropdown */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for dropdown */
+    padding: 10px; /* Add padding for content inside the dropdown */
+    z-index: 1000; /* Ensure dropdown appears above other content */
+    display: none; /* Initially hide the dropdown */
+  }
+  
+  

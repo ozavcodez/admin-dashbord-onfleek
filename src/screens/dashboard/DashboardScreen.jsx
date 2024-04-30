@@ -81,20 +81,14 @@ const DashboardScreen = () => {
                     initial={{ y: -100, x: -100, opacity: 0 }}
                     animate={{ y: 0, x: 0, opacity: 1 }}
                     className="data" style={{ display: activeDiv === 'data' ? 'grid' : 'none' }}
-                    layoutId="activeSection"
-                    transition={{
-                        type: "spring",
-                        stiffness: 100,
-                        damping: 30,
                     
-                    }}
                 >
                     <AreaCards />
                 </motion.div>
             )}
             {isSmallScreen && (
                 <motion.div
-                    initial={{ y: 100, x: 100, opacity: 0 }}
+                    initial={{ y: -100, x: -100, opacity: 0 }}
                     animate={{ y: 0, x: 0, opacity: 1 }}
                     layoutId="activeSection"
                     transition={{

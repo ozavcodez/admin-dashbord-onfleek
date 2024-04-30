@@ -12,7 +12,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 200px;
+    height: 250px;
     // width: max-content;
     padding: 20px;
     .trainer{
@@ -58,7 +58,8 @@
     }
     .moreInfo{
         display: flex;
-        margin-top: auto;
+        margin-top: 50px;
+        margin-bottom: 5px;
         justify-content:space-between;
 
         span{

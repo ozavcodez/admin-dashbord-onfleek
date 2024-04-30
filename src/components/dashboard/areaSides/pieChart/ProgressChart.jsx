@@ -11,7 +11,8 @@ const ProgressChart = () => {
     return (
         <div className="piechart">
             <div className="radialBar">
-                <AnimatedProgressProvider
+                <
+                    AnimatedProgressProvider
                     valueStart={0}
                     valueEnd={35}
                     duration={1.4}

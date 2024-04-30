@@ -6,12 +6,12 @@ const AreaCard = () => {
     const data = {
         series: [
           {
-            name: "Review",
+            name: "money",
             type: "line",
             data: [30, 0, 30,0, 40,30, 40,40],
           },
           {
-            name: "Revi",
+            name: "time",
             type: "area",
             data: [30, 25, 36, 30, 64, 52,  36, 39],
           },
@@ -24,7 +24,10 @@ const AreaCard = () => {
               show: false, // Hide the toolbar icons
             },
           },
-    
+          title: {
+            text: 'Spend time',
+            align: 'left',
+          },
           fill: {
             colors: ["#F5F5FC"],
             type: "color",
@@ -41,10 +44,13 @@ const AreaCard = () => {
             x: {
               format: "dd/MM/yy HH:mm",
             },
-            offsetY: 7,
+            offsetY: 2,
           },
           grid: {
             show: false,
+          },
+          legend: {
+           show:false,
           },
           xaxis: {
             type: "day",
